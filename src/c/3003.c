@@ -6,12 +6,13 @@ int main(void) {
 
     for(int i = 0; i < 6; i++) {
         scanf("%d", &arr2[i]);
-        if(arr1[i] == arr2[i])
-            printf("%d ", arr1[i] - arr2[i]); // equation
-        else if(arr1[i] > arr2[i])
-            printf("%d ", arr1[i] - arr2[i]); // shortage
-        else if(arr1[i] < arr2[i])
-            printf("%d ", arr1[i] - arr2[i]); // surplus
+        int diff = arr1[i] - arr2[i];
+        if(diff == 0)
+            printf("0 "); // equation
+        else if(diff > 0)
+            printf("%d ", diff); // shortage
+        else
+            printf("%d ", diff); // surplus
     }
 
     return 0;
